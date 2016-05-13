@@ -119,6 +119,8 @@ else {
     @Test
     public void ivrConfirmationFalse() throws InterruptedException, IOException {
        System.out.print("pulling code");
+        System.out.print("terminal code");
+
         System.out.print(System.getProperty("user.dir"));
         driver.findElementById("app.goplus.in.myapplication.driver.qa:id/edit_mobile_no").sendKeys("9540270015");
         File errorScreenShot = null;
@@ -175,8 +177,7 @@ String signUpButtonTextMobile=driver.findElementById("app.goplus.in.myapplicatio
         System.out.print(System.getProperty("user.dir"));
         driver.findElementById("app.goplus.in.myapplication.driver.qa:id/edit_mobile_no").sendKeys("9540270015");
         File errorScreenShot = null;
-        errorScreenShot = new File(System.getProperty("user.dir") +
-                "/screenshot/error.png");
+        errorScreenShot = new File(System.getProperty("user.dir") + "/screenshot/error.png");
         File file = driver.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(file, errorScreenShot);
         driver.hideKeyboard();
@@ -228,7 +229,6 @@ String signUpButtonTextMobile=driver.findElementById("app.goplus.in.myapplicatio
     @AfterTest
 public void testCaseTearDown()
         {
-
-               driver.quit();
+           driver.quit();
         }
         }
