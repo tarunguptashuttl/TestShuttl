@@ -120,6 +120,8 @@ else {
     public void ivrConfirmationFalse() throws InterruptedException, IOException {
        System.out.print("pulling code");
         System.out.print("terminal code");
+        System.out.print("pulling code");
+        System.out.print("terminal code");
 
         System.out.print(System.getProperty("user.dir"));
         driver.findElementById("app.goplus.in.myapplication.driver.qa:id/edit_mobile_no").sendKeys("9540270015");
