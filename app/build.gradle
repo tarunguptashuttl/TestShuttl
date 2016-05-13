@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 'android-N'
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.example.tarun.testshuttl"
+        minSdkVersion 15
+        targetSdkVersion 'N'
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/androidTest/Java']
+            assets.srcDirs = ['src/main/assets', 'src/androidTest/Java/Myapps']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.+'
+    compile 'com.android.support:design:24.+'
+    compile files('libs/apache-mime4j-0.6.jar')
+    compile files('libs/commons-codec-1.10.jar')
+    compile files('libs/commons-collections-3.2.1.jar')
+    compile files('libs/commons-exec-1.3.jar')
+    compile files('libs/commons-io-2.4.jar')
+    compile files('libs/commons-lang3-3.4.jar')
+    compile files('libs/commons-logging-1.1.3.jar')
+    compile files('libs/commons-validator-1.4.1.jar')
+    compile files('libs/gson-2.3.1.jar')
+    compile files('libs/guava-18.0.jar')
+    compile files('libs/hamcrest-core-1.3.jar')
+    compile files('libs/httpclient-4.4.1.jar')
+    compile files('libs/httpcore-4.4.1.jar')
+    compile files('libs/httpmime-4.4.1.jar')
+    compile files('libs/testng-5.12.1.jar')
+    compile 'junit:junit:4.12'
+    compile   'org.testng:testng:5.12.1'
+}
