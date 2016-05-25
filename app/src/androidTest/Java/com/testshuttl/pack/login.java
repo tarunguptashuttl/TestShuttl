@@ -38,9 +38,9 @@ public void testCaseSetup()throws  Exception
         DesiredCapabilities cap=new DesiredCapabilities();
         cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android device");
-     //   cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "4000");
+     // cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "4000");
         cap.setCapability(MobileCapabilityType.APP, "/home/tarun/AndroidStudioProjects/TestShuttl/app/src/androidTest/Myapps/app-qa.apk");
-       // cap.setCapability("noReset", true);
+     // cap.setCapability("noReset", true);
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
           /*  Location loc =new Location(20.0,12.5,1000);
             driver.setLocation(loc);
@@ -49,7 +49,6 @@ public void testCaseSetup()throws  Exception
             MobileElement myDynamicElement = (MobileElement) (new WebDriverWait(driver, 10))
                     .until(ExpectedConditions.presenceOfElementLocated(By.id("myDynamicElement")));*/
         }
-
         @Test   // driver not found message
         public void AinvalidPnumber() throws InterruptedException, IOException {
         driver.findElementById("app.goplus.in.myapplication.driver.qa:id/edit_mobile_no").sendKeys("9540270000");
@@ -61,8 +60,6 @@ public void testCaseSetup()throws  Exception
         System.out.println("printing screen");
         assertEquals(getButtonText,"SIGN UUP");
         }
-
-
        @Test     // login with IVR confirmation true
         public void BivrConfirmationTrue() throws InterruptedException {
             driver.findElementById("app.goplus.in.myapplication.driver.qa:id/edit_mobile_no").sendKeys("9540270015");
